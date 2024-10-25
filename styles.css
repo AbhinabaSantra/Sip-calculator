@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
 body {
   font-family: "Montserrat", sans-serif;
   padding: 4px 0px 0px 0px;
@@ -98,10 +98,12 @@ li {
   background-color: white;
   color: rgb(152, 26, 43);
 }
-p {
-  margin: 8px;
-}
 
-.amountInvested {
-  margin-top: 16px;
+.amountInvestedDiv,
+.amountFinalDiv {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-weight: 600;
 }

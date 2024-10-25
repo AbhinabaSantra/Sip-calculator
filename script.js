@@ -35,11 +35,13 @@ function pageRenderer(LI) {
   }
 }
 
+amountCalculator("SIPButton");
+amountCalculator("LumpSumButton");
+
 //Determines which button is clicked and calculates accordingly
 Button.forEach((button) => {
   button.addEventListener("click", () => {
     const type = button.classList[1];
-    console.log(type);
     amountCalculator(type);
   });
 });
@@ -63,8 +65,32 @@ function amountCalculator(type) {
       invest_amount = invest * mon;
       mon += 12;
     }
-    amountInvestedPara[0].innerHTML = `Amount Invested: ${invest_amount}`;
-    amountFinalPara[0].innerHTML = `Total Amount: ${final_amount}`;
+    amountInvestedPara[0].innerHTML = formatNumberIndian(invest_amount);
+    amountFinalPara[0].innerHTML = formatNumberIndian(final_amount);
   } else {
+    const invest = amountInput[1].value;
+    const time = timeInput[1].value;
+    const rate = rateInput[1].value;
+    const value1 = rate / 100;
+    const value2 = 1 + value1;
+    const amount1 = Math.pow(value2, time);
+    final_amount = invest * amount1;
+    final_amount = Math.round(final_amount);
+    invest_amount = invest;
+    amountInvestedPara[1].innerHTML = formatNumberIndian(invest_amount);
+    amountFinalPara[1].innerHTML = formatNumberIndian(final_amount);
   }
+}
+
+function formatNumberIndian(number) {
+  let numStr = number.toString();
+  let lastThree = numStr.slice(-3); // Get the last three digits
+  let otherNumbers = numStr.slice(0, -3); // Get the rest of the number
+
+  // Add a comma after every two digits for the part before the last three digits
+  if (otherNumbers !== "") {
+    otherNumbers = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",");
+  }
+
+  return otherNumbers + (otherNumbers !== "" ? "," : "") + lastThree;
 }
