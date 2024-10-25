@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 4px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  flex-direction: column;
+}
+
+.innerDiv {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  width: fit-content;
+}
+
+.innerDiv label {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.enterButton {
+  margin: 16px 0px 0px 54px;
+  background-color: rgb(152, 26, 43);
+  padding: 8px 48px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  border: 0px;
+  border-radius: 18px;
+}
+
+input {
+  outline: none;
+  padding: 6px 16px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px #424242 solid;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+input:focus {
+  border-color: rgb(152, 26, 43);
+  box-shadow: 0 0 5px rgba(152, 26, 43, 0.5);
+}
+
+label {
+  font-size: 16px;
+}
+
+.monthlySIP,
+.LumpSum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  list-style: none;
+}
+
+nav {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  border: 1px solid rgb(96, 16, 27);
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.LumpSum {
+  display: none;
+}
+.monthlyLI {
+  background-color: rgb(152, 26, 43);
+  color: white;
+}
+.LumpSumLI {
+  background-color: white;
+  color: rgb(152, 26, 43);
+}
+p {
+  margin: 8px;
+}
+
+.amountInvested {
+  margin-top: 16px;
+}

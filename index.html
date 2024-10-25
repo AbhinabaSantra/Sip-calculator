@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SIP calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="monthlyLI">Monthly SIP</li>
+        <li class="LumpSumLI">LumpSum</li>
+      </ul>
+    </nav>
+
+    <div class="monthlySIP">
+      <div class="innerDiv">
+        <label for="amount">Monthly Sip :</label>
+        <input
+          type="number"
+          name="Monthly-sip"
+          id="amount"
+          value="1000"
+          class="amountInput"
+        />
+
+        <label for="time">Time :</label>
+        <input
+          type="number"
+          name="Time"
+          id="time"
+          value="10"
+          class="timeInput"
+        />
+
+        <label for="rate">Rate :</label>
+        <input
+          type="number"
+          name="Rate"
+          id="rate"
+          value="15"
+          class="rateInput"
+        />
+      </div>
+
+      <input type="button" value="Enter" class="enterButton SIPButton" />
+      <p class="amountInvested"></p>
+      <p class="amountFinal"></p>
+    </div>
+
+    <div class="LumpSum">
+      <div class="innerDiv">
+        <label for="amount">Amount :</label>
+        <input
+          type="number"
+          name="Monthly-sip"
+          id="amount"
+          value="100000"
+          class="amountInput"
+        />
+
+        <label for="time">Time :</label>
+        <input
+          type="number"
+          name="Time"
+          id="time"
+          value="10"
+          class="timeInput"
+        />
+
+        <label for="rate">Rate :</label>
+        <input
+          type="number"
+          name="Rate"
+          id="rate"
+          value="15"
+          class="rateInput"
+        />
+      </div>
+
+      <input type="button" value="Enter" class="enterButton lumpsumButton" />
+      <p class="amountInvested"></p>
+      <p class="amountFinal"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
